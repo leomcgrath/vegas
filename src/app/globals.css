@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0d0417;
+  --background-alt: #170a29;
+  --foreground: #f4ecff;
+  --muted: #b9a8d6;
+  --surface: #1a0e30;
+  --surface-border: #3a2160;
+
+  --pink: #ff2e93;
+  --gold: #ffcb47;
+  --teal: #2fe0d6;
+  --green: #33e39c;
+  --red: #ff5470;
+
+  --shadow-pink: 0 0 16px rgba(255, 46, 147, 0.55);
+  --shadow-gold: 0 0 16px rgba(255, 203, 71, 0.5);
+  --shadow-teal: 0 0 16px rgba(47, 224, 214, 0.45);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-alt: var(--background-alt);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-surface: var(--surface);
+  --color-surface-border: var(--surface-border);
+  --color-pink: var(--pink);
+  --color-gold: var(--gold);
+  --color-teal: var(--teal);
+  --color-green: var(--green);
+  --color-red: var(--red);
+  --font-display: var(--font-display);
+  --font-ticker: var(--font-ticker);
+  --font-body: var(--font-body);
+}
+
+body {
+  background: radial-gradient(
+      ellipse 80% 50% at 50% -10%,
+      rgba(255, 46, 147, 0.18),
+      transparent
+    ),
+    radial-gradient(
+      ellipse 60% 40% at 90% 10%,
+      rgba(47, 224, 214, 0.12),
+      transparent
+    ),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.font-marquee {
+  font-family: var(--font-display), sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.font-ticker {
+  font-family: var(--font-ticker), monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.glow-pink {
+  text-shadow: 0 0 8px rgba(255, 46, 147, 0.8), 0 0 20px rgba(255, 46, 147, 0.4);
+}
+
+.glow-gold {
+  text-shadow: 0 0 8px rgba(255, 203, 71, 0.8), 0 0 20px rgba(255, 203, 71, 0.4);
+}
+
+.card-surface {
+  background: linear-gradient(160deg, var(--surface), var(--background-alt));
+  border: 1px solid var(--surface-border);
+}
